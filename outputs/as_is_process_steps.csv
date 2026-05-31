@@ -1,0 +1,16 @@
+Step,Party,Action,System,Failure_point,Regulatory_risk,Has_failure,Has_reg_risk
+1,Provider,Patient attends clinic — diagnosis recorded manually in EHR,EHR (standalone),,,False,False
+2,Provider,Clinical coder assigns ICD-10 code manually — no validation,EHR (standalone),ICD-10 coding error — 35.5% GP denial rate,DoH: ICD-10 mandatory,True,True
+3,Provider,Billing team exports claim from EHR manually — re-enters into portal,EHR + manual export,Duplicate data entry — no EHR/RCM integration,,True,False
+4,Provider,Claim submitted via Shafafiya (Dubai) or eSMA (Abu Dhabi),Shafafiya / eSMA,,DHA/DoH: Shafafiya/eSMA compliance,False,True
+5,Insurer,Claims intake team receives claim — logged manually into RCM system,RCM system (standalone),Manual logging — AR days increase,,True,False
+6,Insurer,Eligibility check performed manually against member database,Manual lookup,Manual eligibility — delays and errors,,True,False
+7,Insurer,Medical reviewer checks pre-authorisation status manually,Manual check,Pre-auth missed — 32.7% inpatient denial rate,DHA: Pre-auth mandatory for inpatient,True,True
+8,Insurer,Clinical team reviews medical necessity — no decision support tool,Manual review,No decision support — inconsistent outcomes,,True,False
+9,Insurer,"Claim approved, pended, or denied — decision entered manually",Manual entry,,,False,False
+10,Regulator,DHA/DoH receives claim data via Shafafiya/eSMA portal,Shafafiya / eSMA,,,False,False
+11,Regulator,"Regulator flags non-compliant claims — ICD-10 errors, missing pre-auth",Automated flag,Non-compliant claims flagged — automatic denial,DHA/DoH: Compliance enforcement,True,True
+12,Insurer,Denial letter generated — sent to provider manually,Manual letter,,,False,False
+13,Insurer,Denied claim enters AR queue — no automated follow-up trigger,AR queue,No automated follow-up — revenue leakage,DHA/DoH: 90-day submission rule,True,True
+14,Provider,Provider receives denial — manual review and resubmission process,Manual review,Slow resubmission — 90-day window at risk,,True,False
+15,Provider,Resubmitted claim restarts full process from Step 4,Shafafiya / eSMA,,,False,False

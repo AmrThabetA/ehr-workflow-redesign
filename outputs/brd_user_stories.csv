@@ -1,0 +1,8 @@
+ID,As_a,I_want_to,So_that
+US-01,Clinical coder,See ICD-10 validation errors in real time as I code,I can fix errors before submission and reduce denial rate
+US-02,Billing team member,Have claim data flow automatically from EHR to RCM,I eliminate duplicate entry errors and save 2 hours per day
+US-03,Medical reviewer,See pre-auth status automatically checked before I review,I only review claims that have valid pre-auth — saving review time
+US-04,Care manager,Receive daily alerts for members predicted to become high-cost,I can enrol them in care programmes before costs spike
+US-05,Claims operations manager,See denied claims automatically routed by reason with deadlines,I never miss the 90-day resubmission window
+US-06,CFO,See AED recovery metrics and denial rate trends in a live dashboard,I can track ROI of the workflow redesign in real time
+US-07,DHA/DoH compliance officer,Confirm all claims meet DHA/DoH rules before submission,We avoid regulatory rejections and potential fines

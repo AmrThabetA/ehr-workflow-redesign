@@ -1,0 +1,11 @@
+ID,Requirement,Priority,Links_to_BO,Links_to_gap
+FR-01,System shall validate ICD-10 codes in real time at point of entry in EHR,Critical,BO-01,Gap 1
+FR-02,System shall prevent claim submission if ICD-10 code is invalid or missing,Critical,BO-01,Gap 1
+FR-03,EHR shall auto-generate structured claim data on consultation completion,High,BO-02,Gap 2
+FR-04,Claim data shall flow automatically to RCM system without manual re-entry,High,BO-02,Gap 2
+FR-05,System shall verify pre-authorisation status before inpatient claim processing,Critical,BO-03,Gap 3
+FR-06,Claims without valid pre-auth shall be flagged and held — not denied post-review,Critical,BO-03,Gap 3
+FR-07,P3 predictive model shall run daily and flag members with high-cost probability >0.7,High,BO-04,Gap 4
+FR-08,Flagged members shall be automatically referred to care management within 24 hours,High,BO-04,Gap 4
+FR-09,System shall validate all claims against DHA/DoH rules before submission,Critical,BO-05,Gap 6
+FR-10,Denied claims shall be automatically routed by denial reason with 90-day tracker,High,BO-06,Gap 5

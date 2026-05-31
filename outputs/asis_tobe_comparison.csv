@@ -1,0 +1,9 @@
+Metric,As_Is,To_Be,Improvement
+Overall denial rate,33.6%,<15%,55% reduction
+Inpatient denial rate,32.7%,<12%,63% reduction
+ICD-10 coding error rate,35.5% (GP),<5%,86% reduction
+Pre-auth compliance rate,Inconsistent,99%+,Full compliance
+AR days,45+ days,<25 days,44% faster
+High-cost members flagged proactively,0% (reactive only),87% (P3 model),87% catch rate
+Regulatory compliance rate,Partial,99%+,Full compliance
+Manual data entry steps,8 of 15 steps,1 of 10 steps,88% automation

@@ -1,0 +1,7 @@
+ID,Category,Requirement,Priority
+NFR-01,Performance,ICD-10 validation shall return result within 2 seconds of code entry,High
+NFR-02,Performance,"P3 model shall process all 50,000+ members nightly within 2 hours",High
+NFR-03,Security,All member data shall be encrypted at rest and in transit — AES-256,Critical
+NFR-04,Compliance,System shall comply with DHA/DoH data residency requirements — UAE only,Critical
+NFR-05,Availability,Claims processing system shall maintain 99.5% uptime during business hours,High
+NFR-06,Scalability,"System shall handle 10,000+ concurrent claim submissions without degradation",Medium

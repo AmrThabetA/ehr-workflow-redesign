@@ -1,0 +1,8 @@
+ID,Stakeholder,Interest,Influence,Support
+SH-01,Chief Financial Officer,AED recovery — loss ratio improvement,High,Champion
+SH-02,Chief Medical Officer,Clinical quality — care management outcomes,High,Champion
+SH-03,Head of Claims Operations,Denial rate reduction — AR days improvement,High,Champion
+SH-04,Head of Care Management,High-cost member flagging — proactive intervention,Medium,Supporter
+SH-05,IT Systems Director,System integration — technical implementation,High,Neutral
+SH-06,DHA/DoH Compliance Officer,Regulatory compliance — DHA/DoH rule adherence,Medium,Supporter
+SH-07,Provider (Hospital/Clinic),Faster claim processing — reduced resubmissions,Low,Supporter

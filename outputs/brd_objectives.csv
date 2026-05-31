@@ -1,0 +1,7 @@
+ID,Objective,Priority,Links_to_gap
+BO-01,Reduce overall claim denial rate from 33.6% to below 15%,Critical,Gap 1
+BO-02,Automate EHR-to-RCM data flow — eliminate manual re-entry,High,Gap 2
+BO-03,Achieve 99%+ pre-authorisation compliance for inpatient claims,Critical,Gap 3
+BO-04,Deploy P3 predictive model to flag high-cost members proactively,High,Gap 4
+BO-05,Achieve full DHA/DoH regulatory compliance on all submissions,Critical,Gap 6
+BO-06,Recover AED 9.1M in denied and leaking revenue within 6 months,High,All gaps

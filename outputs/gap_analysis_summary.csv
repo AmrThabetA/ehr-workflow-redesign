@@ -1,0 +1,7 @@
+Gap,Party,Gap_description,AED_impact,Regulatory_risk,Priority,AED_impact_fmt
+1,Provider,ICD-10 coding errors — no validation,2642812.9629999995,High,2,"AED 2,642,813"
+2,Provider/Insurer,No EHR to RCM integration — manual re-entry,1510178.8360000001,High,3,"AED 1,510,179"
+3,Insurer,Manual pre-auth — inpatient claims,1834887.08,Critical,1,"AED 1,834,887"
+4,Insurer,No high-cost member identification,6783941.1,High,2,"AED 6,783,941"
+5,Insurer,No automated denial follow-up,3775447.09,High,3,"AED 3,775,447"
+6,All parties,No pre-submission compliance check,1887723.545,Critical,1,"AED 1,887,724"

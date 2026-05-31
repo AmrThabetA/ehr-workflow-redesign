@@ -1,0 +1,11 @@
+Step,Party,Action,System,Closes_gap,Automation_level
+1,Provider,Patient attends — diagnosis entered in EHR with real-time ICD-10 validation,EHR + ICD-10 validation engine,Gap 1 — ICD-10 coding errors,Semi-automated
+2,Provider,Claim auto-generated from EHR — no manual re-entry into RCM,EHR-RCM integration layer,Gap 2 — No EHR/RCM integration,Fully automated
+3,Provider,"Pre-submission compliance check — ICD-10, eligibility, pre-auth, 90-day window",Compliance rules engine,Gap 6 — No compliance check,Fully automated
+4,Insurer,Claim submitted automatically via Shafafiya/eSMA integration,Automated Shafafiya/eSMA API,Gap 6 — Shafafiya compliance,Fully automated
+5,Insurer,Automated eligibility verification via real-time API call,Eligibility API,Gap 6 — Eligibility check,Fully automated
+6,Insurer,Automated pre-auth rules engine — flags missing pre-auth before processing,Pre-auth rules engine,Gap 3 — Manual pre-auth,Fully automated
+7,Insurer,AI-assisted medical necessity review with decision support tool,Decision support tool,Gap 3 — Inconsistent review,Semi-automated
+8,Regulator,DHA/DoH receives compliant claim — automated validation passed,Shafafiya/eSMA,Gap 6 — Regulatory compliance,Fully automated
+9,Insurer,Claim approved and paid — or denial routed automatically by reason code,RCM + denial routing engine,Gap 5 — No denial follow-up,Fully automated
+10,Insurer,P3 model runs daily — high-cost members flagged for care management,P3 predictive model,Gap 4 — High-cost members,Fully automated
