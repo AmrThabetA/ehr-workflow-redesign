@@ -9,12 +9,13 @@ How a manual, non-compliant claims workflow at a UAE health insurer was redesign
 
 ---
 
-## The Problem: the As-Is Workflow
+## The Problem: where the As-Is workflow breaks
 
 The current EHR-to-insurer claims process is **15 manual steps** across three parties, with no validation, no integration, and no compliance check before submission. Errors are only caught *after* a claim is rejected — too late to fix inside the 90-day window.
 
-<!-- swap in your actual as-is diagram filename below -->
-![As-is claims workflow](notebooks/as_is_process.png)
+![As-is workflow failure analysis](images/as_is_failure_analysis.png)
+
+The denial rate barely moves across specialties (30–35%), which is the tell: this isn't a clinical problem, it's a *process* problem. The biggest single exposure isn't denied claims at all — it's **AED 45.2M** in unmanaged high-cost members that no one is flagging early.
 
 **Where it breaks:**
 - ICD-10 coding errors caught only at rejection (35.5% error rate for GPs)
@@ -25,12 +26,11 @@ The current EHR-to-insurer claims process is **15 manual steps** across three pa
 
 ---
 
-## The Fix: the To-Be Workflow
+## The Fix: what the redesign recovers
 
-The redesign collapses **15 manual steps → 10 automated or semi-automated steps** — adding real-time ICD-10 validation, an EHR-RCM integration layer, an automated pre-auth rules engine, and the P3 predictive model for high-cost members.
+The redesign collapses **15 manual steps → 10 automated or semi-automated steps** — real-time ICD-10 validation, an EHR-RCM integration layer, an automated pre-auth rules engine, and the P3 predictive model for high-cost members. Six gaps, each mapped to a fix, a KPI, and a delivery phase.
 
-<!-- swap in your actual to-be diagram filename below -->
-![To-be redesigned workflow](notebooks/to_be_process.png)
+![BRD KPI dashboard — improvement and recovery by gap](images/brd_kpi_dashboard.png)
 
 | | As-Is | To-Be |
 |---|---|---|
@@ -39,15 +39,12 @@ The redesign collapses **15 manual steps → 10 automated or semi-automated step
 | ICD-10 errors | caught at rejection | validated in < 2 sec |
 | Pre-auth | 3–5 days, manual | automated, < 5 sec |
 | High-cost members | reactive (0%) | flagged early (87%) |
-| AR days | 45+ | < 25 |
+
+The biggest KPI win is eliminating missing pre-auth (100% improvement); the biggest AED recovery is high-cost member identification (**AED 3.4M**), powered by the P3 model.
 
 ---
 
-## What That's Worth: AED 9.2M Across 6 Gaps
-
-Each break in the as-is process maps to a quantified gap and a fix, delivered in 3 phases.
-
-![Recovery by gap](notebooks/gap_recovery_chart.png)
+## The 6 Gaps → AED 9.2M
 
 | Gap | Fix | Recovery | Risk |
 |---|---|---|---|
@@ -58,7 +55,7 @@ Each break in the as-is process maps to a quantified gap and a fix, delivered in
 | No denial follow-up | Auto routing + tracker | AED 0.4M | High |
 | No compliance check | Pre-submission engine | AED 1.5M | Critical |
 
-Delivered as **6 Epics / 18 Jira stories** over 3 phases (Foundation → Automation → Intelligence), with full FR-01→FR-06 traceability.
+Delivered as **6 Epics / 18 Jira stories** over 3 phases — Foundation (Months 1–3) → Automation (4–6) → Intelligence (7–9) — with full FR-01→FR-06 traceability.
 
 ---
 
@@ -68,7 +65,7 @@ Delivered as **6 Epics / 18 Jira stories** over 3 phases (Foundation → Automat
 |---|---|
 | [Full Confluence Export](brd/BRD_full_Confluence.pdf) | 14 sections — stakeholders, requirements traceability, 17 NFRs, constraints, sign-off |
 | [Executive Summary](brd/BRD_summary.pdf) | 7-page quick read — gaps, epics, phases, financial case |
-| [Tableau KPI Dashboard](https://public.tableau.com/app/profile/amr.thabet/viz/EHRWorkflowRedesignBRDKPIDashboard/EHRWorkflowRedesignBRDKPIDashboard) | Before/after KPI improvement + recovery by gap |
+| [Tableau KPI Dashboard](https://public.tableau.com/app/profile/amr.thabet/viz/EHRWorkflowRedesignBRDKPIDashboard/EHRWorkflowRedesignBRDKPIDashboard) | Live before/after KPI + recovery by gap |
 
 > Notebooks too large for GitHub's preview? Open via [nbviewer](https://nbviewer.org/github/AmrThabetA/ehr-workflow-redesign/tree/main/notebooks/) or click **Raw**.
 
