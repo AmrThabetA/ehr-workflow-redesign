@@ -5,122 +5,72 @@
 ![Tableau](https://img.shields.io/badge/Tableau-Public-5795A7)
 ![Jira](https://img.shields.io/badge/Jira-Atlassian-D7A800)
 
-## Overview
+A compliance-driven Business Requirements Document for redesigning the EHR-to-insurer claims workflow at a leading UAE health insurer. The current workflow is manual and non-compliant — a **33.6% denial rate** across **4,500 claims** and **AED 7.55M** in unrecovered revenue.
 
-A compliance-driven Business Requirements Document (BRD) for the redesign of the EHR-to-insurer claims workflow at a leading UAE health insurer. The current workflow is manual, fragmented, and non-compliant — generating a 33.6% denial rate across 4,500 claims and AED 7.55M in unrecovered revenue.
+This project identifies **6 gaps** across Provider, Insurer, and Regulator, quantifies each one's financial impact, and turns them into a formal BRD with full requirements traceability — **AED 9.2M** in total recoverable value across 3 delivery phases.
 
-This project identifies 6 gaps across three parties (Provider, Insurer, Regulator), quantifies their financial impact, and produces a formal BRD with full requirements traceability — delivered across Confluence, Jira, Jupyter, Tableau, and Visio.
-
----
-
-## BRD Documents
-
-Two versions of the BRD are committed to this repository under `brd/`:
-
-| Document | Description |
-|---|---|
-| [BRD — Full Confluence Export](brd/BRD_full_Confluence.pdf) | Complete 14-section BRD produced in Confluence — stakeholder register, requirements traceability (FR-01 to FR-06), 17 non-functional requirements, assumptions, constraints, and sign-off matrix |
-| [BRD — Executive Summary](brd/BRD_summary.pdf) | 7-page overview covering gap analysis, Jira epics/stories, delivery phases, and financial case — quick-read version for stakeholder review |
-
-The live BRD and Jira backlog are maintained in Atlassian Confluence and Jira. These PDFs are static snapshots committed for portfolio accessibility.
+![Gap recovery by area](notebooks/gap_recovery_chart.png)
 
 ---
 
-## Key Numbers
-
-| Metric | Value |
-|---|---|
-| Total claims | 4,500 |
-| Denial rate | 33.6% |
-| Denied value | AED 7,550,894 |
-| Inpatient denial rate | 32.7% |
-| Total gap recovery | AED 9,200,000 |
-| P3 model AUC | 0.950 |
-| High-cost member detection | 87% (projected at 70% conservative deployment rate) |
-
----
-
-## 6 Gaps Identified
+## The 6 Gaps → AED 9.2M Recovery
 
 | Gap | Party | Recovery | Risk |
 |---|---|---|---|
-| Gap 1 — ICD-10 coding errors | Provider | AED 1,600,000 | High |
-| Gap 2 — No EHR/RCM integration | Provider/Insurer | AED 1,100,000 | High |
-| Gap 3 — Manual pre-authorisation | Insurer | AED 1,200,000 | Critical |
-| Gap 4 — No high-cost member ID | Insurer | AED 3,400,000 | High |
-| Gap 5 — No automated denial follow-up | Insurer | AED 400,000 | High |
-| Gap 6 — No compliance check | All parties | AED 1,500,000 | Critical |
+| ICD-10 coding errors | Provider | AED 1,600,000 | High |
+| No EHR/RCM integration | Provider/Insurer | AED 1,100,000 | High |
+| Manual pre-authorisation | Insurer | AED 1,200,000 | Critical |
+| No high-cost member ID | Insurer | AED 3,400,000 | High |
+| No automated denial follow-up | Insurer | AED 400,000 | High |
+| No pre-submission compliance check | All parties | AED 1,500,000 | Critical |
 
-Recovery figures reflect estimated recoverable amount after solution implementation. Raw AED impact figures and full derivations are in `brd/BRD_full_Confluence.pdf` and Notebook 02.
+Each gap traces to a functional requirement (FR-01 → FR-06) and a delivery phase. Full derivations are in [`notebooks/02_gap_analysis.ipynb`](notebooks/02_gap_analysis.ipynb).
 
----
-
-## Deliverables
-
-| Deliverable | Tool | Status |
-|---|---|---|
-| BRD Document — 10 sections | Confluence | ✅ |
-| User Stories — 6 Epics · 18 Stories | Jira | ✅ |
-| As-Is Analysis | Jupyter Notebook | ✅ |
-| Gap Analysis | Jupyter Notebook | ✅ |
-| To-Be Process Design | Jupyter Notebook | ✅ |
-| BRD Data and Charts | Jupyter Notebook | ✅ |
-| KPI Dashboard | Tableau Public | ✅ |
-| BPMN As-Is Process Map | Visio | ✅ |
-| BRD PDF — Full Confluence Export | PDF | ✅ |
-| BRD PDF — Executive Summary | PDF | ✅ |
+![Implementation burden](notebooks/implementation_burden.png)
 
 ---
 
-## Delivery Phases
+## Delivery in 3 Phases
 
 | Phase | Scope | Timeline | Recovery |
 |---|---|---|---|
-| Phase 1 — Foundation | ICD-10 validation + EHR-RCM integration | Months 1–3 | AED 2,700,000 |
-| Phase 2 — Automation | Pre-auth engine + denial routing + compliance check | Months 4–6 | AED 3,100,000 |
-| Phase 3 — Intelligence | P3 predictive model deployment | Months 7–9 | AED 3,400,000 |
+| **1 — Foundation** | ICD-10 validation + EHR-RCM integration | Months 1–3 | AED 2.7M |
+| **2 — Automation** | Pre-auth engine + denial routing + compliance check | Months 4–6 | AED 3.1M |
+| **3 — Intelligence** | P3 predictive model deployment (AUC 0.950) | Months 7–9 | AED 3.4M |
+
+---
+
+## The BRD
+
+| Document | What's inside |
+|---|---|
+| [Full Confluence Export](brd/BRD_full_Confluence.pdf) | 14 sections — stakeholder register, FR-01→FR-06 traceability, 17 non-functional requirements, assumptions, constraints, sign-off matrix |
+| [Executive Summary](brd/BRD_summary.pdf) | 7-page quick-read — gaps, Jira epics, phases, financial case |
+
+Delivered as **6 Epics / 18 user stories** in Jira and a **live Tableau KPI dashboard** → [view dashboard](https://public.tableau.com/app/profile/amr.thabet/viz/EHRWorkflowRedesignBRDKPIDashboard/EHRWorkflowRedesignBRDKPIDashboard).
+
+> Note: the Jupyter notebooks may show GitHub's "An error occurred" preview on large files. Open them via [nbviewer](https://nbviewer.org/github/AmrThabetA/ehr-workflow-redesign/tree/main/notebooks/) if so, or click **Raw**.
 
 ---
 
 ## Regulatory Context
 
-- **DHA** — Dubai Health Authority — Shafafiya portal compliance
-- **DoH/HAAD** — Abu Dhabi Department of Health
-- **eSMA** — Emirates Health Insurance Portal
-- **ICD-10** — Mandatory coding standard for all UAE claims
-- **Pre-authorisation** — Mandatory for all inpatient claims
-- **90-day window** — Hard DHA/DoH submission deadline
+DHA (Dubai · Shafafiya portal) · DoH/HAAD (Abu Dhabi) · eSMA · mandatory ICD-10 coding · mandatory inpatient pre-auth · hard 90-day submission window.
+
+**Tools:** `Python` · `pandas` · `scikit-learn` · `SQL` · `Tableau` · `Jira` · `Confluence` · `Visio`
 
 ---
 
-## Tools Used
-
-`Python` `pandas` `matplotlib` `scikit-learn` `SQL` `Tableau` `Jira` `Confluence` `Visio`
-
----
-
-## Portfolio
-
-This is Project 4 of 4 in the UAE Healthcare Analytics Portfolio.
+## Healthcare Analytics Portfolio (4 projects)
 
 | Project | Topic | Link |
 |---|---|---|
 | P1 | UAE Claims Denial Analysis | [GitHub](https://github.com/AmrThabetA/healthcare-claims-analysis) |
-| P2 | RCM Performance Dashboard | [Tableau Public](https://public.tableau.com/app/profile/amr.thabet/viz/UAE-MENA-RCM-Dashboard/UAEMENARCMPerformanceDashboard2023-2024) |
+| P2 | RCM Performance Dashboard | [Tableau](https://public.tableau.com/app/profile/amr.thabet/viz/UAE-MENA-RCM-Dashboard/UAEMENARCMPerformanceDashboard2023-2024) |
 | P3 | Chronic Disease Cost Modelling | [GitHub](https://github.com/AmrThabetA/chronic-disease-cost-modelling) |
-| P4 | EHR Workflow Redesign BRD | This repository |
-| Visual Suite | Healthcare Analytics — Observable Plot | [Live Dashboard](https://amrthabeta.github.io/portfolio-visuals/src/visual_suite.html) |
+| **P4** | **EHR Workflow Redesign BRD** | **This repo** |
+| ✨ | Interactive Visual Suite | [Live dashboard](https://amrthabeta.github.io/portfolio-visuals/src/visual_suite.html) |
 
 ---
 
-## Links
-
-- [Tableau KPI Dashboard](https://public.tableau.com/app/profile/amr.thabet/viz/EHRWorkflowRedesignBRDKPIDashboard/EHRWorkflowRedesignBRDKPIDashboard)
-- [BRD — Full Confluence Export](brd/BRD_full_Confluence.pdf)
-- [BRD — Executive Summary](brd/BRD_summary.pdf)
-- [Healthcare Analytics Visual Suite](https://amrthabeta.github.io/portfolio-visuals/src/visual_suite.html)
-- [GitHub Profile](https://github.com/AmrThabetA)
-
----
-
-*Author: Amr Thabet · Healthcare Data and Business Analyst · Abu Dhabi, UAE*
+*Amr Thabet · Healthcare Data & Business Analyst · Abu Dhabi, UAE · [GitHub](https://github.com/AmrThabetA)*
