@@ -59,16 +59,16 @@ Recovery figures reflect estimated recoverable amount after solution implementat
 
 | Deliverable | Tool | Status |
 |---|---|---|
-| BRD Document — 10 sections | Confluence | ✅ Complete |
-| User Stories — 6 Epics · 18 Stories | Jira | ✅ Complete |
-| As-Is Analysis | Jupyter Notebook | ✅ Complete |
-| Gap Analysis | Jupyter Notebook | ✅ Complete |
-| To-Be Process Design | Jupyter Notebook | ✅ Complete |
-| BRD Data and Charts | Jupyter Notebook | ✅ Complete |
-| KPI Dashboard | Tableau Public | ✅ Complete |
-| BPMN As-Is Process Map | Visio | ✅ Complete |
-| BRD PDF — Full Confluence Export | PDF | ✅ Committed |
-| BRD PDF — Executive Summary | PDF | ✅ Committed |
+| BRD Document — 10 sections | Confluence | ✅ |
+| User Stories — 6 Epics · 18 Stories | Jira | ✅ |
+| As-Is Analysis | Jupyter Notebook | ✅ |
+| Gap Analysis | Jupyter Notebook | ✅ |
+| To-Be Process Design | Jupyter Notebook | ✅ |
+| BRD Data and Charts | Jupyter Notebook | ✅ |
+| KPI Dashboard | Tableau Public | ✅ |
+| BPMN As-Is Process Map | Visio | ✅ |
+| BRD PDF — Full Confluence Export | PDF | ✅ |
+| BRD PDF — Executive Summary | PDF | ✅ |
 
 ---
 
