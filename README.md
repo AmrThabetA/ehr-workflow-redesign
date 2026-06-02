@@ -13,7 +13,7 @@ How a manual, non-compliant claims workflow at a UAE health insurer was redesign
 
 The current EHR-to-insurer claims process is **15 manual steps** across three parties, with no validation, no integration, and no compliance check before submission. Errors are only caught *after* a claim is rejected — too late to fix inside the 90-day window.
 
-![As-is workflow failure analysis](images/as_is_failure_analysis.png)
+![As-is workflow failure analysis](an-in-workflow.png)
 
 The denial rate barely moves across specialties (30–35%), which is the tell: this isn't a clinical problem, it's a *process* problem. The biggest single exposure isn't denied claims at all — it's **AED 45.2M** in unmanaged high-cost members that no one is flagging early.
 
@@ -30,7 +30,7 @@ The denial rate barely moves across specialties (30–35%), which is the tell: t
 
 The redesign collapses **15 manual steps → 10 automated or semi-automated steps** — real-time ICD-10 validation, an EHR-RCM integration layer, an automated pre-auth rules engine, and the P3 predictive model for high-cost members. Six gaps, each mapped to a fix, a KPI, and a delivery phase.
 
-![BRD KPI dashboard — improvement and recovery by gap](images/brd_kpi_dashboard.png)
+![BRD KPI dashboard — improvement and recovery by gap](EHR-Workflow-Redesign.png)
 
 | | As-Is | To-Be |
 |---|---|---|
